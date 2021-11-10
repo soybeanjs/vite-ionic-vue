@@ -1,0 +1,7 @@
+{
+  "name": "qitan-ionic-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
