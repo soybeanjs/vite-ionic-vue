@@ -1,5 +1,5 @@
 {
-  "name": "qitan-ionic-app",
+  "name": "qitan",
   "integrations": {
     "capacitor": {}
   },
