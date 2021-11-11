@@ -1,5 +1,5 @@
-import LayoutWithBar from './LayoutWithBar/index.vue';
-import LayoutWithoutBar from './LayoutWithoutBar/index.vue';
 import TabLayout from './TabLayout/index.vue';
+import IonLayout from './IonLayout/index.vue';
+import BlankLayout from './BlankLayout/index.vue';
 
-export { LayoutWithBar, LayoutWithoutBar, TabLayout };
+export { TabLayout, IonLayout, BlankLayout };

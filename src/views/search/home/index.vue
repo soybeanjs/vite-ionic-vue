@@ -1,14 +1,12 @@
 <template>
-  <ion-page>
-    <ion-content>
-      <div>
-        <h3>搜索首页</h3>
-      </div>
-    </ion-content>
-  </ion-page>
+  <blank-layout>
+    <p class="inline-block whitespace-nowrap">
+      <span v-for="i in 100" :key="i">{{ i }}</span>
+    </p>
+  </blank-layout>
 </template>
 
 <script setup lang="ts">
-import { IonContent, IonPage } from '@ionic/vue';
+import { BlankLayout } from '@/layouts';
 </script>
 <style scoped></style>

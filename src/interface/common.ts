@@ -5,16 +5,8 @@ import { EnumRoutePath } from '@/enum';
 interface RouteMeta {
   /** 路由名称 */
   title?: string;
-  /** 缓存页面 */
-  keepAlive?: boolean;
-  /** 页面100%视高 */
-  fullPage?: boolean;
-  /** 不作为菜单 */
-  isNotMenu?: boolean;
-  /** 菜单和面包屑对应的图标 */
-  icon?: string;
-  /** 路由作为菜单时的排序 */
-  order?: number;
+  /** 去除状态栏 */
+  removeStatusBar?: boolean;
 }
 
 /** 路由配置 */

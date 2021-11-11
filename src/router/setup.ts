@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import type { App } from 'vue';
-import { routes } from '../routes';
+import { routes } from './routes';
 
 export const router = createRouter({
   history: createWebHistory(),
