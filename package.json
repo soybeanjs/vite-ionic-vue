@@ -9,7 +9,11 @@
     "build": "vue-cli-service build",
     "preview": "serve ./dist",
     "lint": "eslint ./src --ext .vue,.js,jsx,.ts,tsx",
-    "lint:fix": "eslint --fix ./src --ext .vue,.js,jsx,.ts,tsx"
+    "lint:fix": "eslint --fix ./src --ext .vue,.js,jsx,.ts,tsx",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{vue,js,jsx,ts,tsx}": "eslint --fix"
   },
   "dependencies": {
     "@capacitor/app": "1.0.6",
@@ -45,6 +49,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.3",
     "fork-ts-checker-webpack-plugin-v5": "npm:fork-ts-checker-webpack-plugin@^6.4.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.6",
     "postcss-pxtorem": "~5.1.1",
     "serve": "^13.0.2",
     "typescript": "^4.4.4",
