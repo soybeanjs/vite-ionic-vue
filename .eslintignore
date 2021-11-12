@@ -13,6 +13,6 @@ lib
 /packages
 .vscode
 .local
-vue.config.js
 /src/packages
 /public
+vue.config.js
