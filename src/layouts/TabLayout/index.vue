@@ -1,11 +1,6 @@
 <template>
   <ion-page>
     <ion-tabs>
-      <ion-header v-show="showStatusBar" mode="ios">
-        <ion-toolbar style="--border-width: 0">
-          <ion-title>{{ EnumRouteTitle.enterprise }}</ion-title>
-        </ion-toolbar>
-      </ion-header>
       <ion-router-outlet></ion-router-outlet>
       <ion-tab-bar slot="bottom" :tab="activeTab">
         <ion-tab-button v-for="tab in tabs" :key="tab.id" :tab="tab.route" :href="tab.route">
@@ -20,17 +15,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
-import {
-  IonPage,
-  IonHeader,
-  IonTabBar,
-  IonTabButton,
-  IonTabs,
-  IonLabel,
-  IonToolbar,
-  IonRouterOutlet,
-  IonTitle
-} from '@ionic/vue';
+import { IonPage, IonTabBar, IonTabButton, IonTabs, IonLabel, IonRouterOutlet } from '@ionic/vue';
 import { Icon } from '@iconify/vue';
 import { EnumRoutePath, EnumRouteTitle } from '@/enum';
 
@@ -44,7 +29,6 @@ interface Tab {
 const route = useRoute();
 
 const activeTab = computed(() => route.path);
-const showStatusBar = computed(() => activeTab.value === EnumRoutePath.enterprise);
 
 const tabs: Tab[] = [
   {

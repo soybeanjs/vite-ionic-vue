@@ -1,5 +1,4 @@
 import TabLayout from './TabLayout/index.vue';
-import IonLayout from './IonLayout/index.vue';
-import BlankLayout from './BlankLayout/index.vue';
+import BasicLayout from './BasicLayout/index.vue';
 
-export { TabLayout, IonLayout, BlankLayout };
+export { TabLayout, BasicLayout };
