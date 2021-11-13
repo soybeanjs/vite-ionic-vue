@@ -1,8 +1,9 @@
 <template>
   <basic-layout :show-back-btn="false" :toolbar-title="EnumRouteTitle.enterprise">
-    <div>
-      <h3>企业对比</h3>
-    </div>
+    <template #toolbar-extral>
+      <span class="text-24px">编辑</span>
+    </template>
+    <div></div>
   </basic-layout>
 </template>
 

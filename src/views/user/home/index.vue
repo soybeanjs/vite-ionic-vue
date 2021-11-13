@@ -1,13 +1,27 @@
 <template>
-  <basic-layout :show-back-btn="false">
+  <basic-layout :show-back-btn="false" :toolbar-content-full="true">
     <template #bg>
-      <div>这是头部的背景</div>
+      <img :src="userBanner" alt="" class="w-full h-auto" />
     </template>
-    <h3>user</h3>
+    <template #toolbar>
+      <div class="flex w-full px-32px pt-24px py-36px">
+        <div class="flex-center w-120px h-120px bg-white rounded-full">
+          <Icon icon="carbon:user-avatar-filled" class="text-120px text-[#afafaf]" />
+        </div>
+        <div class="flex-1"></div>
+        <Icon icon="icon-park-outline:setting-one" class="text-48px text-white" />
+      </div>
+    </template>
+    <div class="px-32px">
+      <action-card />
+    </div>
   </basic-layout>
 </template>
 
 <script setup lang="ts">
+import { Icon } from '@iconify/vue';
 import { BasicLayout } from '@/layouts';
+import { userBanner } from '@/assets';
+import { ActionCard } from './components';
 </script>
 <style scoped></style>

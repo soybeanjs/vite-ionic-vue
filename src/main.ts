@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
-import { setupIonic, setupAssets } from './plugins';
+import { setupIonic, setupAssets, setupScreenOrientation } from './plugins';
 import { setupRouter } from './router';
 import App from './App.vue';
 
@@ -8,6 +8,9 @@ async function setupApp() {
 
   // 引入静态资源依赖(js,css)
   setupAssets();
+
+  // 禁用横屏
+  setupScreenOrientation();
 
   // 挂载ionic框架
   setupIonic(app);

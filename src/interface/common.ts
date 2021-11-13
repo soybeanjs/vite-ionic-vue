@@ -1,5 +1,5 @@
 import type { RouteRecordRaw } from 'vue-router';
-import { EnumRoutePath } from '@/enum';
+import { EnumRoutePath, EnumLoginModule } from '@/enum';
 
 /** 路由描述 */
 interface RouteMeta {
@@ -14,3 +14,6 @@ export type CustomRoute = RouteRecordRaw & { meta: RouteMeta };
 
 /** 路由路径 */
 export type RoutePathKey = keyof typeof EnumRoutePath;
+
+/** 登录模块 */
+export type LoginModuleType = keyof typeof EnumLoginModule;
