@@ -1,16 +1,21 @@
 import { createApp } from 'vue';
-import { setupIonic, setupAssets, setupScreenOrientation } from './plugins';
+import { setupIonic, setupAssets, setupScreenOrientation, setupStatusBar } from './plugins';
 import { setupRouter } from './router';
 import App from './App.vue';
 
-async function setupApp() {
-  const app = createApp(App);
-
+function setupPlugins() {
   // 引入静态资源依赖(js,css)
   setupAssets();
 
   // 禁用横屏
   setupScreenOrientation();
+
+  // 状态栏沉浸
+  setupStatusBar();
+}
+
+async function setupApp() {
+  const app = createApp(App);
 
   // 挂载ionic框架
   setupIonic(app);
@@ -22,4 +27,5 @@ async function setupApp() {
   app.mount('#app');
 }
 
+setupPlugins();
 setupApp();

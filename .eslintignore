@@ -7,12 +7,8 @@ lib
 .vscode
 .idea
 /dist/
-/mock/
 /public
 /docs
-/packages
 .vscode
 .local
-/src/packages
-/public
-vue.config.js
+index.html

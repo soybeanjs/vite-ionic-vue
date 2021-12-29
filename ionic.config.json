@@ -1,7 +1,7 @@
 {
-  "name": "qitan",
+  "name": "vite-ionic-vue",
   "integrations": {
     "capacitor": {}
   },
-  "type": "vue"
+  "type": "custom"
 }

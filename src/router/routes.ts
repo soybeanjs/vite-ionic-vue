@@ -47,6 +47,14 @@ const customRoutes: CustomRoute[] = [
     meta: {
       title: EnumRouteTitle.search
     }
+  },
+  {
+    name: ROUTE_NAME_MAP.get('user_settings'),
+    path: EnumRoutePath.user_settings,
+    component: () => import('@/views/user/settings/index.vue'),
+    meta: {
+      title: EnumRouteTitle.user_settings
+    }
   }
 ];
 

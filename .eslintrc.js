@@ -3,25 +3,24 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  parser: 'vue-eslint-parser',
-  parserOptions: {
-    ecmaVersion: 2020,
-    parser: '@typescript-eslint/parser'
-  },
   globals: {
     defineProps: 'readonly',
     defineEmits: 'readonly',
     defineExpose: 'readonly',
-    withDefaults: 'readonly'
+    withDefaults: 'readonly',
+    PROJECT_BUILD_TIME: 'readonly',
+    AMap: 'readonly',
+    BMap: 'readonly',
+    TMap: 'readonly'
+  },
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    ecmaVersion: 12,
+    parser: '@typescript-eslint/parser',
+    sourceType: 'module'
   },
   plugins: ['vue', '@typescript-eslint'],
-  extends: [
-    'plugin:vue/vue3-recommended',
-    'airbnb-base',
-    '@vue/typescript/recommended',
-    'plugin:prettier/recommended',
-    '@vue/prettier/@typescript-eslint'
-  ],
+  extends: ['plugin:vue/vue3-recommended', 'airbnb-base', '@vue/typescript/recommended', 'plugin:prettier/recommended'],
   rules: {
     'no-unused-vars': 'off',
     'import/extensions': 'off',
@@ -31,7 +30,7 @@ module.exports = {
     'import/prefer-default-export': 0,
     'no-use-before-define': 'off',
     'vue/multi-word-component-names': 0,
-    'vue/no-deprecated-slot-attribute': 'off',
+    'vue/no-deprecated-slot-attribute': 0,
     'max-classes-per-file': 0,
     '@typescript-eslint/no-explicit-any': 0,
     '@typescript-eslint/no-inferrable-types': 0,
