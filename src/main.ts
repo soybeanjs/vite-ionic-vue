@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
-import { setupIonic, setupAssets, setupScreenOrientation, setupStatusBar } from './plugins';
+import { setupIonic, setupAssets, setupScreenOrientation, setupStatusBar, setupAndroidNotch } from './plugins';
 import { setupRouter } from './router';
 import App from './App.vue';
 
@@ -12,6 +12,9 @@ function setupPlugins() {
 
   // 状态栏沉浸
   setupStatusBar();
+
+  // 安卓安全区距离
+  setupAndroidNotch();
 }
 
 async function setupApp() {
